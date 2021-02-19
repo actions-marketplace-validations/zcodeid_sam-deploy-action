@@ -2,15 +2,12 @@
 
 set -e
 
-# just check my location
-pwd
-ls
-
 if [[ -z "$TEMPLATE" ]]; then
     echo "Empty template specified. Looking for template.yaml..."
 
     if [[ ! -f "template.yaml" ]]; then
-        echo template.yaml not found
+        echo template.yaml not found $(pwd)
+        echo existing files: $(ls)
         exit 1
     fi
 
