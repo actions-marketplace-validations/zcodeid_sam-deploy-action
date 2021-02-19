@@ -2,6 +2,8 @@
 
 set -e
 
+cd $WORKDIR
+
 if [[ -z "$TEMPLATE" ]]; then
     echo "Empty template specified. Looking for template.yaml..."
 
